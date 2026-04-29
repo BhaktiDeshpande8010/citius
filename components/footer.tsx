@@ -36,26 +36,26 @@ export function Footer() {
 
   return (
     <footer className="bg-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-20">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="col-span-2">
-            <Link href="/" className="inline-flex items-center gap-2.5 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center">
-                <span className="text-white font-bold text-lg">C</span>
+            <Link href="/" className="inline-flex items-center gap-2 mb-5">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center">
+                <span className="text-white font-bold text-base sm:text-lg">C</span>
               </div>
-              <span className="text-xl font-semibold">Citius</span>
+              <span className="text-lg sm:text-xl font-semibold">Citius</span>
             </Link>
-            <p className="text-slate-400 text-sm leading-relaxed max-w-xs mb-6">
+            <p className="text-slate-400 text-sm leading-relaxed max-w-xs mb-5">
               IRDAI Licensed Direct Broker making insurance simple, transparent, and accessible for everyone.
             </p>
-            <div className="space-y-3">
+            <div className="space-y-2.5">
               <a href="mailto:hello@citiusinsurance.in" className="flex items-center gap-3 text-sm text-slate-400 hover:text-emerald-400 transition-colors">
-                <Mail className="w-4 h-4" />
+                <Mail className="w-4 h-4 shrink-0" />
                 hello@citiusinsurance.in
               </a>
               <a href="tel:1800-123-4567" className="flex items-center gap-3 text-sm text-slate-400 hover:text-emerald-400 transition-colors">
-                <Phone className="w-4 h-4" />
+                <Phone className="w-4 h-4 shrink-0" />
                 1800-123-4567 (Toll Free)
               </a>
               <div className="flex items-start gap-3 text-sm text-slate-400">
@@ -67,13 +67,13 @@ export function Footer() {
 
           {/* Products */}
           <div>
-            <h3 className="font-semibold text-sm mb-5">Products</h3>
-            <ul className="space-y-3">
+            <h3 className="font-semibold text-sm mb-4">Products</h3>
+            <ul className="space-y-2.5">
               {links.products.map((link) => (
                 <li key={link.label}>
                   <button
                     onClick={() => handleNavClick(link.href)}
-                    className="text-sm text-slate-400 hover:text-emerald-400 transition-colors"
+                    className="text-sm text-slate-400 hover:text-emerald-400 transition-colors text-left"
                   >
                     {link.label}
                   </button>
@@ -84,8 +84,8 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="font-semibold text-sm mb-5">Company</h3>
-            <ul className="space-y-3">
+            <h3 className="font-semibold text-sm mb-4">Company</h3>
+            <ul className="space-y-2.5">
               {links.company.map((link) => (
                 <li key={link.label}>
                   {link.href.startsWith("/") ? (
@@ -104,8 +104,8 @@ export function Footer() {
 
           {/* Support */}
           <div>
-            <h3 className="font-semibold text-sm mb-5">Support</h3>
-            <ul className="space-y-3">
+            <h3 className="font-semibold text-sm mb-4">Support</h3>
+            <ul className="space-y-2.5">
               {links.support.map((link) => (
                 <li key={link.label}>
                   <a href={link.href} className="text-sm text-slate-400 hover:text-emerald-400 transition-colors">
@@ -118,16 +118,15 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Bottom bar */}
       <div className="border-t border-slate-800">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-6">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
             <p className="text-xs text-slate-500">
               © 2026 Citius Insurance Broking Pvt. Ltd. All rights reserved.
             </p>
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4 sm:gap-6">
               <span className="text-xs text-slate-500">IRDAI License: DB 123/45</span>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3 sm:gap-4">
                 <a href="#" className="text-xs text-slate-500 hover:text-slate-400 transition-colors">Privacy</a>
                 <a href="#" className="text-xs text-slate-500 hover:text-slate-400 transition-colors">Terms</a>
               </div>
